@@ -1,18 +1,15 @@
 {
-  "name": "portfolia",
+  "name": "portfolia-server",
   "version": "1.0.0",
-  "description": "Risk Management & Mitigation Tracker - Central risk register with dashboards and reports",
-  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:server": "cd server && npm run dev",
-    "dev:client": "cd client && npm run dev",
-    "build": "cd client && npm run build",
-    "start": "cd server && npm start",
-    "setup": "npm install && cd server && npm install && cd ../client && npm install",
-    "db:init": "cd server && node scripts/init-db.js"
+    "dev": "node --watch index.js",
+    "start": "node index.js"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+  "dependencies": {
+    "better-sqlite3": "^11.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "pdfkit": "^0.15.0"
   }
 }
