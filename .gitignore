@@ -1,0 +1,12 @@
+node_modules/
+client/node_modules/
+server/node_modules/
+server/data/
+dist/
+*.log
+.env
+.env.local
+.DS_Store
+
+__pycache__/
+*.py[cod]
